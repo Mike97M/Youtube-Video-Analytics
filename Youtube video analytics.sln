@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube video analytics", "Youtube video analytics\Youtube video analytics.csproj", "{73745A33-ACA0-4F17-971D-75E3267F1B6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube video analyticsTests", "Youtube video analyticsTests\Youtube video analyticsTests.csproj", "{0BA82BC8-30EE-4821-8C35-808212A8B95B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{73745A33-ACA0-4F17-971D-75E3267F1B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73745A33-ACA0-4F17-971D-75E3267F1B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73745A33-ACA0-4F17-971D-75E3267F1B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA82BC8-30EE-4821-8C35-808212A8B95B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA82BC8-30EE-4821-8C35-808212A8B95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA82BC8-30EE-4821-8C35-808212A8B95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA82BC8-30EE-4821-8C35-808212A8B95B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
