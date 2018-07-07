@@ -21,6 +21,8 @@ namespace Youtube_video_analytics
             _request = new RestRequest($"watch?v={videoId}", Method.GET);
             _response = _client.Execute(_request);
 
+            if (!IsVideoStatsAvailable(_response.Content))
+                throw new Exception("Video stats not available to public");
 
             _request = new RestRequest($"insight_ajax?action_get_statistics_and_data=1&v={videoId}", Method.POST);
 
@@ -52,11 +54,14 @@ namespace Youtube_video_analytics
             var match = Regex.Match(response, pattern);
 
             if (!match.Success)
+            {
+                Console.WriteLine(response);
                 throw new Exception("Error while extracting data");
+            }
 
             string statistics = match.Value;
             statistics = statistics.Replace("<graph_data><![CDATA[", "");
-            statistics = statistics.Replace("]></graph_data>", "");
+            statistics = statistics.Replace("]]></graph_data>", "");
             return statistics;
         }
         private bool IsVideoStatsAvailable(string response)
