@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube video analytics", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube video analyticsTests", "Youtube video analyticsTests\Youtube video analyticsTests.csproj", "{0BA82BC8-30EE-4821-8C35-808212A8B95B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube Video Analytics Tool", "Youtube Video Analytics Tool\Youtube Video Analytics Tool.csproj", "{EDCF45B1-D9A6-404D-9040-4378EC250DAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0BA82BC8-30EE-4821-8C35-808212A8B95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BA82BC8-30EE-4821-8C35-808212A8B95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BA82BC8-30EE-4821-8C35-808212A8B95B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCF45B1-D9A6-404D-9040-4378EC250DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCF45B1-D9A6-404D-9040-4378EC250DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCF45B1-D9A6-404D-9040-4378EC250DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCF45B1-D9A6-404D-9040-4378EC250DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
