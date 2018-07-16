@@ -9,7 +9,7 @@ namespace Youtube_video_analytics
     {
 
         [JsonProperty("data")]
-        public IList<object> Data { get; set; }
+        public IList<double> Data { get; set; }
     }
 
 

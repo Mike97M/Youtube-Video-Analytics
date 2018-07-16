@@ -1,6 +1,8 @@
 ﻿using RestSharp;
 using System;
+using System.Linq;
 using System.Text.RegularExpressions;
+using System.Web;
 
 namespace Youtube_video_analytics
 {
@@ -16,8 +18,9 @@ namespace Youtube_video_analytics
                 CookieContainer = new System.Net.CookieContainer()
             };
         }
-        public string GetVideoAnalytics(string videoId)
+        public string GetVideoAnalytics(string link)
         {
+            string videoId = extractVideoID(link);
             _request = new RestRequest($"watch?v={videoId}", Method.GET);
             _response = _client.Execute(_request);
 
@@ -33,18 +36,34 @@ namespace Youtube_video_analytics
             return ExtractStatistics(_response.Content);
         }
 
+        public string extractVideoID(string link)
+        {
+            var uri = new UriBuilder(link).Uri;
+
+            var query = HttpUtility.ParseQueryString(uri.Query);
+
+            if (query.AllKeys.Contains("v"))
+            {
+                return query["v"];
+            }
+            else
+            {
+                return uri.Segments.Last();
+            }
+
+        }
 
         private string ExtractToken(string respons)
         {
             string pattern = @"\'XSRF_TOKEN\'\s*\n*:\s*\n*""(.*)""";
-            // Console.WriteLine(respons);
+
             var match = Regex.Match(respons, pattern, RegexOptions.Multiline);
-            Console.WriteLine(match.Value);
+
             if (!match.Success)
                 throw new Exception("Token can't be extreacted");
+
             string token = match.Value;
             token = token.Replace("\'XSRF_TOKEN\': \"", "").Replace("\"", "");
-            Console.WriteLine(token);
             return token;
         }
 
