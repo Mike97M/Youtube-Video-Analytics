@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBoxVideoLink = new System.Windows.Forms.TextBox();
+            this.buttonCheckVideo = new System.Windows.Forms.Button();
+            this.dataGridViewYTStats = new System.Windows.Forms.DataGridView();
             this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DailyViews = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalViews = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,31 +40,39 @@
             this.TotalSubs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DailyShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYTStats)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxVideoLink
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(695, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBoxVideoLink.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxVideoLink.Location = new System.Drawing.Point(192, 13);
+            this.textBoxVideoLink.Name = "textBoxVideoLink";
+            this.textBoxVideoLink.Size = new System.Drawing.Size(810, 22);
+            this.textBoxVideoLink.TabIndex = 0;
             // 
-            // button1
+            // buttonCheckVideo
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonCheckVideo.Location = new System.Drawing.Point(12, 12);
+            this.buttonCheckVideo.Name = "buttonCheckVideo";
+            this.buttonCheckVideo.Size = new System.Drawing.Size(75, 23);
+            this.buttonCheckVideo.TabIndex = 1;
+            this.buttonCheckVideo.Text = "Check";
+            this.buttonCheckVideo.UseVisualStyleBackColor = true;
+            this.buttonCheckVideo.Click += new System.EventHandler(this.buttonCheckVideo_Click);
             // 
-            // dataGridView1
+            // dataGridViewYTStats
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewYTStats.AllowUserToAddRows = false;
+            this.dataGridViewYTStats.AllowUserToDeleteRows = false;
+            this.dataGridViewYTStats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewYTStats.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridViewYTStats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewYTStats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Day,
             this.DailyViews,
             this.TotalViews,
@@ -74,13 +82,13 @@
             this.TotalSubs,
             this.DailyShares,
             this.TotalShares});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 397);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridViewYTStats.Location = new System.Drawing.Point(12, 41);
+            this.dataGridViewYTStats.Name = "dataGridViewYTStats";
+            this.dataGridViewYTStats.ReadOnly = true;
+            this.dataGridViewYTStats.RowHeadersVisible = false;
+            this.dataGridViewYTStats.RowTemplate.Height = 24;
+            this.dataGridViewYTStats.Size = new System.Drawing.Size(990, 397);
+            this.dataGridViewYTStats.TabIndex = 2;
             // 
             // Day
             // 
@@ -145,17 +153,27 @@
             this.TotalShares.Name = "TotalShares";
             this.TotalShares.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "YT video link:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewYTStats);
+            this.Controls.Add(this.buttonCheckVideo);
+            this.Controls.Add(this.textBoxVideoLink);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYTStats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,9 +181,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBoxVideoLink;
+        private System.Windows.Forms.Button buttonCheckVideo;
+        private System.Windows.Forms.DataGridView dataGridViewYTStats;
         private System.Windows.Forms.DataGridViewTextBoxColumn Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn DailyViews;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalViews;
@@ -175,6 +193,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalSubs;
         private System.Windows.Forms.DataGridViewTextBoxColumn DailyShares;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalShares;
+        private System.Windows.Forms.Label label1;
     }
 }
 
